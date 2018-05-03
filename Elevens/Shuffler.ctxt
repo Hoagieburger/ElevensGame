@@ -1,6 +1,5 @@
 #BlueJ class context
 comment0.target=Shuffler
-comment0.text=\r\n\ This\ class\ provides\ a\ convenient\ way\ to\ test\ shuffling\ methods.\r\n
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
 comment1.text=\r\n\ Tests\ shuffling\ methods.\r\n\ @param\ args\ is\ not\ used.\r\n

@@ -1,4 +1,6 @@
 #BlueJ class context
 comment0.target=Answers
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Answers\ here.\r\n\r\n\ @author\ Joshua\ Hergenroeder\r\n\ @version\ 1\r\n
-numComments=1
+comment1.params=
+comment1.target=java.lang.String\ flip()
+comment1.text=\ ACTIVITY\ 2\r\n\ 1)\ A\ deck\ is\ a\ group/list\ of\ cards.\r\n\ 2)\ The\ deck\ will\ contain\ 6\ cards.\r\n\ 3)\ ranks\:\ Two,\ Three,\ Four,\ Five,\ Six,\ Seven,\ Eight,\ Nine,\ Ten,\ Jack,\ Queen,\ King,\ Ace\r\n\ \ \ \ suits\:\ spades,\ hearts,\ diamonds,\ clubs\r\n\ \ \ \ pointValue\:\ 2,\ 3,\ 4,\ 5,\ 6,\ 7,\ 8,\ 9,\ 10,\ 10,\ 10,\ 10,\ 11\r\n\ 4)\ The\ order\ of\ ranks\ and\ pointValues\ has\ to\ line\ up\ to\ each\ other\ so\ that\ the\ correct\ card\ will\ have\ the\ correct\ value.\ The\ order\ of\ suits\ does\ not\ matter.\r\n\ \r\n
+numComments=2
