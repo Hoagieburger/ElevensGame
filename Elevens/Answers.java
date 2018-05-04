@@ -45,9 +45,9 @@ public class Answers
     // 3) 3,2,1
     
     
-    /////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Misc
-    public static void bubbleSort(int[] list){ // Work smarter not harder
+    public static int[] bubbleSort(int[] list){ // Work smarter not harder
         for (int i = list.length - 1; i > 0; i--){
             for (int j = 0; j < i; j++){
                 if (list[j] > list[j + 1]){
@@ -57,5 +57,6 @@ public class Answers
                 }
             }
         }
+        return list;
     }
 }

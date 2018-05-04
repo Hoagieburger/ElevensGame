@@ -24,7 +24,7 @@ public class Deck {
      * @param suits is an array containing all of the card suits.
      * @param values is an array containing all of the card point values.
      */
-    public Deck(String[] ranks, String[] suits, int[] values) {
+    public Deck(String[] ranks, String[] suits, int[] values){
         cards = new ArrayList<Card>();
         for(String i : suits){
             for(int j = 0; j < ranks.length; j++){
@@ -33,12 +33,13 @@ public class Deck {
             }
         }
         size = cards.size();
+        shuffle();
     }
     /**
      * Determines if this deck is empty (no undealt cards).
      * @return true if this deck is empty, false otherwise.
      */
-    public boolean isEmpty() {
+    public boolean isEmpty(){
         if(size() <= 0){
             return true;
         }
@@ -48,7 +49,7 @@ public class Deck {
      * Accesses the number of undealt cards in this deck.
      * @return the number of undealt cards in this deck.
      */
-    public int size() {
+    public int size(){
         if(size > 0){
             return size;
         }
@@ -58,15 +59,26 @@ public class Deck {
      * Randomly permute the given collection of cards
      * and reset the size to represent the entire deck.
      */
-    public void shuffle() {
-        /* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
+    public void shuffle(){
+        int[] shuffleTemp = new int[cards.size()];
+        for (int i = 0; i < shuffleTemp.length; i++){
+            shuffleTemp[i] = i;
+        }
+        Shuffler.selectionShuffle(shuffleTemp);
+        for (int i : shuffleTemp){
+            cards.add(cards.get(i));
+        }
+        for (int i : shuffleTemp){
+            cards.remove(0);
+        }
+        size = cards.size();
     }
     /**
      * Deals a card from this deck.
      * @return the card just dealt, or null if all the cards have been
      *         previously dealt.
      */
-    public Card deal() {
+    public Card deal(){
         if(size > 0){
             size -= 1;
             return cards.get(size);
@@ -78,7 +90,7 @@ public class Deck {
      * @return a string representation of this deck.
      */
     @Override
-    public String toString() {
+    public String toString(){
         String rtn = "size = " + size + "\nUndealt cards: \n";
         for (int k = size - 1; k >= 0; k--) {
             rtn = rtn + cards.get(k);
